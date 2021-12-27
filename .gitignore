@@ -1,0 +1,6 @@
+# Folders
+node_modules/
+.parcel-cache
+
+# Files
+.DS_Store
