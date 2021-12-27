@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway';
+    text-align: center;
+    background: linear-gradient(180deg, #DA4167, #8A1C7C);
+    min-height: 100vh;
+    position: relative;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 1.5em 0;
+}
+
+.btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #25CED1;
+    padding: 0.75em 1.25em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-continue,
+.btn-next {
+    display: none;
+}
+
+.btn-continue {
+    margin-left: 0.5em;
+}
+
+.letter-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.letter {
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.progress-bar {
+    width: 260px;
+    height: 30px;
+    margin: 2.5em auto 5em;
+    border: 1px solid white;
+    display: none;
+}
+
+.completed {
+    width: 0%;
+    height: 100%;
+    background-image: url(./images/stripes-light.png);
+    background-color: #25CED1;
+    background-blend-mode: multiply;
+}
+
+.loading {
+    animation-name: timer;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+@keyframes timer {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.status-bar {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 100%;
+    height: 4em;
+    padding: 0 4em;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+
+.timer {
+    cursor: pointer;
+}
+
+.timer-input {
+    background-color: #FFFFFF;
+    padding: 1.5em;
+    display: none;
+    grid-template-columns: repeat(3, auto);
+    gap: 1em;
+    position: absolute;
+    top: -8em;
+    right: 4em;
+}
+
+.label {
+    font-size: 0.75rem;
+    text-align: left;
+    color: black;
+    margin-bottom: -0.5em;
+}
+
+.ok {
+    font-size: 0.875rem;
+    color: #FFFFFF;
+    background-color: #25CED1;
+    padding: 0.5em;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    align-self: end;
+    cursor: pointer;
+}
+
+input {
+    font-size: 0.875rem;
+    background-color: #ececec;
+    border: none;
+    width: 60px;
+    padding: 0.5em;
+}
